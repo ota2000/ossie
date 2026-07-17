@@ -1,1 +1,33 @@
-This is for compliance tests
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+# Ossie Compliance
+
+This directory holds the compliance test suites that validate an Ossie
+implementation against a proposal's semantics, plus the shared runner
+that executes them.
+
+- [`ADAPTER_INTERFACE.md`](ADAPTER_INTERFACE.md) — the CLI contract an
+  implementation must satisfy to plug into a compliance suite.
+- [`harness/`](harness/) — the engine-agnostic runner / reporter / DB
+  manager shared by every per-version suite below.
+- [`foundation/`](foundation/) — the compliance suite for the
+  Foundation proposal (`osi_version: "0.1"`). See its
+  [README](foundation/README.md) for current status — this is
+  currently a bootstrap slice, not the full suite.
